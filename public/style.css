@@ -35,10 +35,10 @@ textarea {
 /* Begin my CSS */
 
 .main-body {
-  width: 980px;
+  width: 1024px;
   margin: auto;
 }
 
 #display-div {
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
 }

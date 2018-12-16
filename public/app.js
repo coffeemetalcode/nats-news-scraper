@@ -3,15 +3,13 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+    $("#article-list").append(`<p data-id=${data[i]._id}><a href="#">${data[i].title}`);
   }
 });
 
 
 // Whenever someone clicks a p tag
 $(document).on("click", "p", function() {
-  // Empty the notes from the note section
-  $("#notes").empty();
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
 
@@ -24,7 +22,7 @@ $(document).on("click", "p", function() {
     .then(function(data) {
       console.log(data);
       // The title of the article
-      $("#notes").append("<h2>" + data.title + "</h2>");
+      $("#article-div").html(`<h3><a href=${data.link} target="_blank">${data.title}</a></h3>`);
       // An input to enter a new title
       $("#notes").append("<input id='titleinput' name='title' >");
       // A textarea to add a new note body
@@ -82,7 +80,7 @@ $(document).on("click", "#comment-submit", function() {
 
   // refresh the comments collection JSON object
 
-  
+
   // append all comments to the .comment-display div
   $(".comment-display").append(
     `<h4>${username}</h4>
