@@ -10,7 +10,7 @@ var cheerio = require("cheerio");
 // require the models
 var db = require("./models");
 
-var PORT = 3041;
+var PORT = process.env.PORT || 3041;
 
 // initialize express
 var app = express();
@@ -36,7 +36,7 @@ mongoose.connect(
 // routes
 
 app.get("/wire", function(req, res) {
-  
+
 })
 
 // GET route for scraping federalbaseball.com
