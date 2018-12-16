@@ -1,0 +1,14 @@
+// configure mongoDB
+{
+  "development": {
+    "database": "natsNews",
+    "host": "localhost"
+  },
+  "test": {
+    "database": "natsNews",
+    "host": "localhost"
+  },
+  "production": {
+    "use_env_variable": "MONGODB_URI"
+  }
+}
