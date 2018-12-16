@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Scraping With Mongoose</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nationals News and Comments</title>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/purecss@1.0.0/build/base-min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-      integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+    <div class="main-body">
+      <div id="display-div" class="container">
+        <div class="row">
+          <!-- Article div -->
+          <div class="col-lg-7 article-div">Article Div</div>
+          <!-- Comment div -->
+          <div class="col-lg-5 comment-div">
+            <p>
+              Comment Div
+            </p>
+            <input class="form-control" id="username" name="username">
+            <textarea class="form-control" id="comment-body" name="comment"></textarea>
+            <button class="btn btn-primary btn-sm" id="comment-submit">Submit</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-7">
+            Comment Display Div
+            <div class="comment-display"></div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>

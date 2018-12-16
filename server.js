@@ -35,6 +35,10 @@ mongoose.connect(
 
 // routes
 
+app.get("/wire", function(req, res) {
+  
+})
+
 // GET route for scraping federalbaseball.com
 app.get("/scrape", function(req, res) {
   // get html body

@@ -70,3 +70,31 @@ $(document).on("click", "#savenote", function() {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
+
+
+// submit multiple comments to the comment-display div
+$(document).on("click", "#comment-submit", function() {
+  // store new comment information
+  let username = $("#username").val();
+  let commentBody = $("#comment-body").val();
+
+  // send comments to the databas
+
+  // refresh the comments collection JSON object
+
+  
+  // append all comments to the .comment-display div
+  $(".comment-display").append(
+    `<h4>${username}</h4>
+    <p>${commentBody}</p>`
+  );
+  
+  console.log(
+    `User ${username} posted a new comment:
+    ${commentBody}`
+  );
+  console.log("New Comment Submitted");
+  // Also, remove the values entered in the input and textarea for note entry
+  $("#username").val("");
+  $("#comment-body").val("");
+});
