@@ -1,0 +1,77 @@
+body {
+  background-image: url("../images/nats.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.main-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.125rem;
+}
+
+/* #article-list {
+  height: auto;
+  overflow-y: scroll;
+} */
+
+#articles {
+  display: inline-block;
+  overflow: auto;
+  width: 60%;
+  height: 700px;
+}
+#notes {
+  float: right;
+  width: 30%;
+}
+
+input {
+  height: 36px;
+  font-size: 24px;
+}
+textarea {
+  height: 200px;
+  font-size: 18px;
+}
+
+/* Begin my CSS */
+
+.main-body {
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+#display-div {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.form-control {
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.comment {
+  background-color: rgba(0, 0, 255, 0.125);
+  margin-bottom: 8px;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+h2 {
+  font-weight: bold;
+}

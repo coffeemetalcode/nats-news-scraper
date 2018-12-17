@@ -22,7 +22,14 @@ $(document).on("click", "p", function() {
     .then(function(data) {
       console.log(data);
       // The title of the article
-      $("#article-div").html(`<h3><a href=${data.link} target="_blank">${data.title}</a></h3>`);
+      $("#article-display").html(`<h3><a href=${data.link} target="_blank">${data.title}</a></h3>`);
+      // create a comment input form
+      $("#comment-div").html(
+        `<h4>What do you think?</h4>
+        <input class="form-control" id="username" name="username" placeholder="User Name">
+        <textarea class="form-control" id="comment-body" name="comment" placeholder="Comment..."></textarea>
+        <button class="btn btn-dark btn-sm" id="comment-submit">Submit</button>`
+      );
       // An input to enter a new title
       $("#notes").append("<input id='titleinput' name='title' >");
       // A textarea to add a new note body
@@ -83,8 +90,8 @@ $(document).on("click", "#comment-submit", function() {
 
   // append all comments to the .comment-display div
   $(".comment-display").append(
-    `<h4>${username}</h4>
-    <p>${commentBody}</p>`
+    `<div class="comment"><h5>${username} commented:</h5>
+    <p>${commentBody}</p></div>`
   );
   
   console.log(
