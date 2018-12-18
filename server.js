@@ -27,7 +27,7 @@ app.use(express.static("public"));
 
 // connect to mongodb
 mongoose.connect(
-  "mongodb://localhost/natsNews",
+  process.env.MONGODB_URI || "mongodb://localhost/natsNews",
   {
     useNewUrlParser: true
   }
