@@ -35,9 +35,6 @@ mongoose.connect(
 
 // routes
 
-app.get("/wire", function(req, res) {
-
-})
 
 // GET route for scraping federalbaseball.com
 app.get("/scrape", function(req, res) {
@@ -70,8 +67,8 @@ app.get("/scrape", function(req, res) {
         });
     });
 
-    // Send a message to the client
-    res.send("Scrape Complete");
+    // Send a message to the console
+    console.log("Scrape Complete");
   });
 });
 

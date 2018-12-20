@@ -1,4 +1,4 @@
-// Grab the articles as a json
+// Display articles in the articles pane.
 $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
@@ -6,7 +6,6 @@ $.getJSON("/articles", function(data) {
     $("#article-list").append(`<p data-id=${data[i]._id}><a href="#">${data[i].title}`);
   }
 });
-
 
 // Whenever someone clicks a p tag
 $(document).on("click", "p", function() {
@@ -22,7 +21,7 @@ $(document).on("click", "p", function() {
     .then(function(data) {
       console.log(data);
       // The title of the article
-      $("#article-display").html(`<h3><a href=${data.link} target="_blank">${data.title}</a></h3>`);
+      $("#article-display").html(`<h3 data-id=${data._id}><a href=${data.link} target="_blank">${data.title}</a></h3>`);
       // create a comment input form
       $("#comment-div").html(
         `<h4>What do you think?</h4>
@@ -47,8 +46,8 @@ $(document).on("click", "p", function() {
     });
 });
 
-// When you click the savenote button
-$(document).on("click", "#savenote", function() {
+// When you click the submit button
+$(document).on("click", "#comment-submit", function() {
   // Grab the id associated with the article from the submit button
   var thisId = $(this).attr("data-id");
 
