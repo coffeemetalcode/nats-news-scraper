@@ -35,6 +35,9 @@ mongoose.connect(
 
 // routes
 
+app.get("/", function(req, res) {
+  console.log("this works");
+}) // I can't get a route on the home page to work for some reason
 
 // GET route for scraping federalbaseball.com
 app.get("/scrape", function(req, res) {
@@ -67,8 +70,9 @@ app.get("/scrape", function(req, res) {
         });
     });
 
-    // Send a message to the console
-    console.log("Scrape Complete");
+    // Send a message to the dom
+    res.send("Scrape Complete");
+    // console.log("Scrape Complete");
   });
 });
 

@@ -57,9 +57,9 @@ $(document).on("click", "#comment-submit", function() {
     url: "/articles/" + thisId,
     data: {
       // Value taken from title input
-      title: $("#titleinput").val(),
+      title: $("#username").val(),
       // Value taken from note textarea
-      body: $("#bodyinput").val()
+      body: $("#comment-body").val()
     }
   })
     // With that done
